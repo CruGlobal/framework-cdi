@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<project name="create-jar" default="jar" basedir=".">
+  <property name="output"  value="output"/>
+  <property name="classes"  value="bin"/>
+  <property name="jarname" value="frameworkCdi.jar"/>
+  
+
+  <target name="jar">
+    <!-- make a jar file -->
+	<mkdir dir="${output}"/>
+  	<jar
+    	jarfile="${output}/${jarname}"
+    	basedir="${classes}/"
+    	excludes="**/*.properties"
+    />
+  </target>
+</project>
